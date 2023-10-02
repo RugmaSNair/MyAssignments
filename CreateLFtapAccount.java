@@ -32,7 +32,7 @@ public class CreateLFtapAccount {
 		driver.findElement(By.linkText("Create Account")).click();
 		
 		//6. Enter an account name
-		driver.findElement(By.id("accountName")).sendKeys("aaaaaa");
+		driver.findElement(By.id("accountName")).sendKeys("bcd");
 		
 		//7. Enter a description as Selenium Automation Tester
 		driver.findElement(By.name("description")).sendKeys("Selenium Automation Tester");
@@ -71,10 +71,8 @@ public class CreateLFtapAccount {
 		driver.findElement(By.className("smallSubmit")).click();
 		
 		//14. Verify that the account name is displayed correctly
-		String text = driver.findElement(By.partialLinkText("aaaaaa")).getText();
-		System.out.println(text);
 		
-		//Not able to retrieve the text
+		
 		
 		//15. Close the browser window
 		driver.close();

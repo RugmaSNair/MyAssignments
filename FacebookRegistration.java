@@ -1,5 +1,7 @@
 package Week2.day1;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -11,6 +13,7 @@ public class FacebookRegistration {
 		// TODO Auto-generated method stub
  ChromeDriver driver = new ChromeDriver();
  driver.get("https://en-gb.facebook.com");
+ driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
  driver.manage().window().maximize();
  Thread.sleep(2000);
  driver.findElement(By.linkText("Create new account")).click();
@@ -34,9 +37,9 @@ public class FacebookRegistration {
  Select dd_year = new Select(dob_year);
  dd_year.selectByValue("2000");
  
- driver.findElement(By.partialLinkText("Female")).click();
+ driver.findElement(By.xpath("//input[@value='1']")).click();
  
- //Radio button is not getting clicked.
+ 
  
  
  
